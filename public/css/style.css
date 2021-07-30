@@ -1,0 +1,23 @@
+#title{
+    text-align: center;
+    background-color:rgb(194, 206, 161);
+    margin: 0px;
+    padding:  20px;
+}
+#top_list ul li {
+    list-style-type: none;
+    float: right;
+    margin-right: 30px;
+    border: solid;
+}
+
+#control{
+    display: block;
+    padding-top: 50px;
+}
+.board-top .left{
+    text-align:left;
+}
+.board-top .right{
+    text-align:right;
+}
