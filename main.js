@@ -2,6 +2,7 @@ var topic = require('./lib/topic.js')
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var path = require('path');
 var db = require('./lib/db')
 const http = require("http");
 db.query(`select * from buglist;`, function(err, result){
@@ -12,7 +13,7 @@ db.query(`select * from buglist;`, function(err, result){
     }
 })
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 exports.app = app.use(bodyParser.urlencoded({extended: false}))
 
