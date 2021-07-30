@@ -22,4 +22,6 @@ app.get('/create/bug', function(request, response) {
 app.post('/createbug_process', function(request, response){
     topic.createbug_process(request, response);
 })
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 5500, function(){ 
+    console.log(`start with port: ${process.env.PORT}`);
+  });
