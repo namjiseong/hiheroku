@@ -5,15 +5,18 @@
   "main": "main.js",
   "dependencies": {
     "express": "^4.17.1",
+    "forever": "^4.0.1",
     "mysql": "^2.18.1",
     "pm2": "^5.1.0"
   },
   "devDependencies": {},
-  "engines": {"node": "14.17.3",
-  "npm": "6.14.13"},
+  "engines": {
+    "node": "14.17.3",
+    "npm": "6.14.13"
+  },
   "scripts": {
     "heroku-postbuild": "npm run build",
-    "start": "node main.js",
+    "start": "forever node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
