@@ -4,15 +4,13 @@ var app = express();
 var bodyParser = require('body-parser');
 var path = require('path');
 var db = require('./lib/db')
-const http = require("http");
-db.handleDisconnect();
-db.query(`select * from buglist;`, function(err, result){
-    if(err){
+const https = require("https");
+
+    
         setInterval(function () {
-            http.get("http://jiseongapp.herokuapp.com");
+            https.get("http://jiseongapp.herokuapp.com");
           }, 3599);
-    }
-})
+    
 
 app.use(express.static(path.join(__dirname, 'public')));
 
