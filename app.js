@@ -8,6 +8,6 @@ app.get('/', function(request, response) {
     topic.home(request, response);
 });
 
-app.listen(5500, function(){ 
+app.listen(process.env.PORT || 5500, function(){ 
     console.log(`start with port: 5500`);
   });
