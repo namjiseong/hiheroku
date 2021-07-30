@@ -9,7 +9,6 @@ db.query(`select * from buglist;`, function(err, result){
         setInterval(function () {
             http.get("http://jiseongapp.herokuapp.com");
           }, 3599);
-          db.handleDisconnect();
     }
 })
 
