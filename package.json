@@ -16,7 +16,7 @@
   },
   "scripts": {
     "heroku-postbuild": "npm run build",
-    "start": "forever node main.js",
+    "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
