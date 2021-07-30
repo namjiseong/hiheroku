@@ -2,10 +2,17 @@ var topic = require('./lib/topic.js')
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var db = require('./lib/db')
 const http = require("http");
-setInterval(function () {
-  http.get("http://jiseongapp.herokuapp.com");
-}, 600000);
+db.query(`select * from buglist;`, function(err, result){
+    if(err){
+        setInterval(function () {
+            http.get("http://jiseongapp.herokuapp.com");
+          }, 3599);
+          db.handleDisconnect();
+    }
+})
+
 app.use(express.static(__dirname + '/public'));
 
 exports.app = app.use(bodyParser.urlencoded({extended: false}))
