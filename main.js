@@ -4,11 +4,11 @@ var app = express();
 var bodyParser = require('body-parser');
 var path = require('path');
 var db = require('./lib/db')
-const https = require("https");
+const http = require("http");
 
     
         setInterval(function () {
-            https.get("http://jiseongapp.herokuapp.com");
+            http.get("http://jiseongapp.herokuapp.com");
           }, 3599);
     
 
