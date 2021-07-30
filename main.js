@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var db = require('./lib/db')
 const http = require("http");
+db.handleDisconnect();
 db.query(`select * from buglist;`, function(err, result){
     if(err){
         setInterval(function () {
