@@ -9,7 +9,7 @@ const http = require("http");
     
         setInterval(function () {
             http.get("http://jiseongapp.herokuapp.com");
-          }, 3599);
+          }, 60000);
     
 
 app.use(express.static(path.join(__dirname, 'public')));
