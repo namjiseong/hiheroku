@@ -21,11 +21,17 @@ app.get('/', function(request, response) {
 app.get('/bug', function(request, response) { 
     topic.bug(request, response);
 });
-app.get('/create/bug', function(request, response) { 
+app.get('/bug/create', function(request, response) { 
     topic.createbug(request, response);
 });
-app.post('/createbug_process', function(request, response){
+app.post('/bug/create_process', function(request, response){
     topic.createbug_process(request, response);
+})
+app.get('/bug/:pageId', function(request, response){
+    topic.bug_page(request, response);
+})
+app.get('/bug/update', function(request, response){
+    topic.updatebug(request, response);
 })
 app.listen(process.env.PORT || 5500, function(){ 
     console.log(`start with port: ${process.env.PORT}`);
