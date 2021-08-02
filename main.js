@@ -30,8 +30,11 @@ app.post('/bug/create_process', function(request, response){
 app.get('/bug/:pageId', function(request, response){
     topic.bug_page(request, response);
 })
-app.get('/bug/update', function(request, response){
+app.get('/bug/update/:pageId', function(request, response){
     topic.updatebug(request, response);
+})
+app.post('/bug/update_process/:pageId', function(request, response){
+    topic.updatebugprocess(request, response);
 })
 app.listen(process.env.PORT || 5500, function(){ 
     console.log(`start with port: ${process.env.PORT}`);
