@@ -36,6 +36,9 @@ app.get('/bug/update/:pageId', function(request, response){
 app.post('/bug/update_process/:pageId', function(request, response){
     topic.updatebugprocess(request, response);
 })
+app.post('/bug/delete_process', function(request, response){
+    topic.deletebugprocess(request, response);
+})
 app.listen(process.env.PORT || 5500, function(){ 
     console.log(`start with port: ${process.env.PORT}`);
   });
