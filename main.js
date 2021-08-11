@@ -33,6 +33,9 @@ app.get('/bug/:pageId', function(request, response){
 app.get('/bug/update/:pageId', function(request, response){
     topic.updatebug(request, response);
 })
+app.get('/st', function(request, response){
+    topic.stretching(request, response);
+})
 app.post('/bug/update_process/:pageId', function(request, response){
     topic.updatebugprocess(request, response);
 })
