@@ -1,8 +1,6 @@
 const URL = "/model/posture_model/"; // 모델 주소
 let model, webcam, ctx, labelContainer, progressContainer, maxPredictions;
 
-timerId = setInterval(check, 1000);
-
 var audio = new Audio("/sound/beep.MP3");
 var onoff = false;
 var online = new Date();
@@ -24,15 +22,13 @@ var cnt4 = 0;
 var cnt5 = 0;
 
 init();
-setSoundBtn();
-
-function setSoundBtn() {}
+timerId = setInterval(check, 1000);
 
 function check() {
   now = new Date();
 
   var seconds = Math.round((now - online) / 1000);
-  fetch(`/posture/alltime`);
+  //fetch(`/posture/alltime`);
   var print_seconds = seconds % 60;
   var minutes = Math.floor(seconds / 60);
   var print_minutes = minutes % 60;
@@ -186,37 +182,37 @@ async function spendtimedata() {
     //86400 == 24시간
     cnt0++;
     //console.log("좋은자세 :" + cnt0 + "초");
-    fetch(`/posture/goodpose`);
+    //fetch(`/posture/goodpose`);
     await sleep(1000);
     playb0 = true;
   } else if (status == "Bad_left") {
     cnt1++;
     //console.log(cnt1);
-    fetch(`/posture/leftpose`);
+    //fetch(`/posture/leftpose`);
     await sleep(1000);
     playb1 = true;
   } else if (status == "Bad_right") {
     cnt2++;
     //console.log(cnt2);
-    fetch(`/posture/rightpose`);
+    //fetch(`/posture/rightpose`);
     await sleep(1000);
     playb2 = true;
   } else if (status == "Bad_back") {
     cnt3++;
     //console.log("뒤 : "+ cnt3 + " 초");
-    fetch(`/posture/backpose`);
+    //fetch(`/posture/backpose`);
     await sleep(1000);
     playb3 = true;
   } else if (status == "Bad_front") {
     cnt4++;
     //console.log(cnt4);
-    fetch(`/posture/frontpose`);
+    //fetch(`/posture/frontpose`);
     await sleep(1000);
     playb4 = true;
   } else if (status == "None") {
     cnt5++;
     //console.log(cnt5);
-    fetch(`/posture/nonetime`);
+    //fetch(`/posture/nonetime`);
     await sleep(1000);
     playb5 = true;
   }

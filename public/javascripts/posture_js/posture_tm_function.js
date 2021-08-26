@@ -185,37 +185,37 @@ async function spendtimedata() {
     //86400 == 24시간
     cnt0++;
     //console.log("좋은자세 :" + cnt0 + "초");
-    fetch(`/posture/goodpose`);
+    //fetch(`/posture/goodpose`);
     await sleep(1000);
     playb0 = true;
   } else if (status == "Bad_left") {
     cnt1++;
     //console.log(cnt1);
-    fetch(`/posture/leftpose`);
+    //fetch(`/posture/leftpose`);
     await sleep(1000);
     playb1 = true;
   } else if (status == "Bad_right") {
     cnt2++;
     //console.log(cnt2);
-    fetch(`/posture/rightpose`);
+    //fetch(`/posture/rightpose`);
     await sleep(1000);
     playb2 = true;
   } else if (status == "Bad_back") {
     cnt3++;
     //console.log("뒤 : "+ cnt3 + " 초");
-    fetch(`/posture/backpose`);
+    //fetch(`/posture/backpose`);
     await sleep(1000);
     playb3 = true;
   } else if (status == "Bad_front") {
     cnt4++;
     //console.log(cnt4);
-    fetch(`/posture/frontpose`);
+    //fetch(`/posture/frontpose`);
     await sleep(1000);
     playb4 = true;
   } else if (status == "None") {
     cnt5++;
     //console.log(cnt5);
-    fetch(`/posture/nonetime`);
+    //fetch(`/posture/nonetime`);
     await sleep(1000);
     playb5 = true;
   }
