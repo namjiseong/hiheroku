@@ -40,20 +40,20 @@ function check() {
 
   if (now_seconds > 20) {
     if (my_status == "rest") {
-      if (sound_check == false) {
+      
         ost.innerText = "";
         gauge.style.width = "0%";
         playbutton.style.display = "block";
         img.style.display = "none";
         audio.play();
-        //audio_pickto.play();
+        audio_pickto.play();
         sound_check = true;
         window.open(
           "/stretching/alert",
           "_blank",
           "width=200, height=200, top=300, left=500 toolbar=no, menubar=no,location=no, scrollbars=no,status=no,resizable=no"
         );
-      }
+      
 
       webcam.play();
       my_status = "normal";
@@ -115,7 +115,7 @@ async function predict() {
       now_seconds % 60
     )}`;
   }
-  values[1].innerHTML = `${count + 1} / 5`;
+  values[1].innerHTML = `${count} / 5`;
   values[2].innerText = `${now_score}점`;
   gauge.style.width = `${count * 20}%`;
 
@@ -148,9 +148,10 @@ async function predict() {
     count = 0;
     my_status = "rest";
     today = new Date();
-
+    sound_check = true;
     audio_pickto.pause();
     webcam.pause();
+
     canvas.style.display = "none";
     ost[0].style.display = "none";
     ost[1].innerText = "스트레칭 시간을 기다리세요!";
