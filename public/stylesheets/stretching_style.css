@@ -1,0 +1,56 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  
+  a {
+    color: #00B7FF;
+  }
+
+  
+  section.article{
+    display: flex;
+  }
+  section.article #canvas_div{
+    width: 450px;
+    height: 450px;
+  }
+  section.article #img{
+    width: 450px;
+    height: 450px;
+  }
+  section.article #label-container{
+    width: 200px;
+  }
+  section.article #number{
+    display: block;
+  }
+  section.article #number #today{
+    margin-bottom: 20px;
+  }
+  section.article #number #sec{
+    margin-bottom: 20px;
+  }
+  section.article #number .labels{
+    display: flex;
+  }
+  section.article #number .labels #progress progress{
+    display: block;
+    margin-left: 10px;
+    padding-top: 18px;
+  }
+  
+  #posetime{
+    position: absolute;
+    padding-left: 20px;
+    font-size: 40px;
+  }
+  #stretching_text{
+    position: absolute;
+    padding-left: 80px;
+    font-size: 20px;
+  }
+
+  
+ 
+
