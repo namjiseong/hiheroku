@@ -12,4 +12,3 @@ main.appendChild(article);
 var stretching = document.createElement("div");
 var posture = document.createElement("div");
 
-

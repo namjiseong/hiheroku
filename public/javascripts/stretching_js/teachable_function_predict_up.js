@@ -72,7 +72,7 @@ async function predict() {
     my_status = "nomal";
     document.getElementById("stretching_text").innerHTML = `성공!`;
     now_score = Math.round(prediction[3].probability * 100);
-    fetch(`/stretching/average/${now_score}`);
+    //fetch(`/stretching/average/${now_score}`);
     document.getElementById("score").innerHTML = "현재점수: " + now_score;
     document.getElementById("allscore").innerHTML += now_score + "점 ";
     await sleep(500);

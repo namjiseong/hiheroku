@@ -107,11 +107,11 @@ async function predict() {
   const prediction = await model.predict(posenetOutput);
 
   if (now_seconds % 60 < 10) {
-    values[0].innerText = `0${Math.round(now_seconds / 60)} : 0${Math.round(
+    values[0].innerText = `0${Math.floor(now_seconds / 60)} : 0${Math.floor(
       now_seconds % 60
     )}`;
   } else {
-    values[0].innerText = `0${Math.round(now_seconds / 60)} : ${Math.round(
+    values[0].innerText = `0${Math.floor(now_seconds / 60)} : ${Math.floor(
       now_seconds % 60
     )}`;
   }
@@ -134,7 +134,7 @@ async function predict() {
     img.src = `/images/pictogram/ptpose_1.png`;
     ost[1].innerText = "성공!";
 
-    now_score += Math.round(prediction[count + 1].probability * 100);
+    now_score = Math.round(prediction[count + 1].probability * 100);
     //fetch(`/stretching/average/${now_score}`); //현재 점수 추가
     await sleep(1000);
     count++;
