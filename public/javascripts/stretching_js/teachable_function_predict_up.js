@@ -28,7 +28,7 @@ async function predict() {
         "stretching_text"
       ).innerHTML = `스트레칭 시간을 기다리세요!`;
       document.getElementById("allscore").innerHTML = "기록: ";
-      //fetch("/stretching/count");
+      fetch("/stretching/count");
       audio_pickto.pause();
     }
   } else if (
@@ -42,7 +42,7 @@ async function predict() {
     my_status = "nomal";
     document.getElementById("stretching_text").innerHTML = `성공!`;
     now_score = Math.round(prediction[1].probability * 100);
-    //fetch(`/stretching/average/${now_score}`);
+    fetch(`/stretching/average/${now_score}`);
     document.getElementById("score").innerHTML = "현재점수: " + now_score;
     document.getElementById("allscore").innerHTML += now_score + "점 ";
     await sleep(500);
@@ -57,7 +57,7 @@ async function predict() {
     my_status = "nomal";
     document.getElementById("stretching_text").innerHTML = `성공!`;
     now_score = Math.round(prediction[2].probability * 100);
-    //fetch(`/stretching/average/${now_score}`);
+    fetch(`/stretching/average/${now_score}`);
     document.getElementById("score").innerHTML = "현재점수: " + now_score;
     document.getElementById("allscore").innerHTML += now_score + "점 ";
     await sleep(500);
@@ -72,7 +72,7 @@ async function predict() {
     my_status = "nomal";
     document.getElementById("stretching_text").innerHTML = `성공!`;
     now_score = Math.round(prediction[3].probability * 100);
-    //fetch(`/stretching/average/${now_score}`);
+    fetch(`/stretching/average/${now_score}`);
     document.getElementById("score").innerHTML = "현재점수: " + now_score;
     document.getElementById("allscore").innerHTML += now_score + "점 ";
     await sleep(500);
@@ -87,7 +87,7 @@ async function predict() {
     my_status = "nomal";
     document.getElementById("stretching_text").innerHTML = `성공!`;
     now_score = Math.round(prediction[4].probability * 100);
-    //fetch(`/stretching/average/${now_score}`);
+    fetch(`/stretching/average/${now_score}`);
     document.getElementById("score").innerHTML = "현재점수: " + now_score;
     document.getElementById("allscore").innerHTML += now_score + "점 ";
     await sleep(500);
@@ -102,7 +102,7 @@ async function predict() {
     my_status = "nomal";
     document.getElementById("stretching_text").innerHTML = `성공!`;
     now_score = Math.round(prediction[5].probability * 100);
-    //fetch(`/stretching/average/${now_score}`);
+    fetch(`/stretching/average/${now_score}`);
     document.getElementById("score").innerHTML = "현재점수: " + now_score;
     document.getElementById("allscore").innerHTML += now_score + " 점";
     await sleep(500);
@@ -120,7 +120,7 @@ async function predict() {
     canvas.style.display = "none";
     document.getElementById("posetime").style.display = "none";
     ost.innerText = "스트레칭 시간을 기다리세요!";
-    //fetch("/stretching/count");
+    fetch("/stretching/count");
   }
   // finally draw the poses
   drawPose(pose);
